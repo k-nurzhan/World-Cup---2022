@@ -1,7 +1,7 @@
 import pandas as pd
 
-df_historical_data = pd.read_csv(r'C:\Users\coys7\Desktop\New folder\WC_data.csv')
-df_fixture = pd.read_csv(r'C:\Users\coys7\Desktop\New folder\WC_fixture.csv')
+df_historical_data = pd.read_csv(r'C:\Users\coys7\World-Cup---2022\Data\WC_data.csv')
+df_fixture = pd.read_csv(r'C:\Users\coys7\World-Cup---2022\Data\WC_fixture.csv')
 
 df_fixture['home'] = df_fixture['home'].str.strip()
 df_fixture['away'] = df_fixture['away'].str.strip()
@@ -24,5 +24,5 @@ df_historical_data = df_historical_data.astype({'HomeGoals': int, 'AwayGoals': i
 df_historical_data['TotalGoals'] = df_historical_data['HomeGoals'] + df_historical_data['AwayGoals']
 
 
-df_historical_data.to_csv('Clean_WC_data.csv', index=False)
-df_fixture.to_csv('clean_WC_fixture.csv', index=False)
+df_historical_data.to_csv('Data\Clean_WC_data.csv', index=False)
+df_fixture.to_csv('Data\clean_WC_fixture.csv', index=False)
